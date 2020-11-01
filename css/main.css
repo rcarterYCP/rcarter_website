@@ -103,6 +103,10 @@ header{
   width: 100vw;
   margin: 0px;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 header h1{
@@ -248,6 +252,8 @@ footer{
   align-items: center;
   flex-direction: row;
   margin: 0px;
+  position: static;
+  bottom: 0px;
 }
 
 /* setting up newsletter signup */
@@ -280,6 +286,91 @@ footer{
 #formsubmitbutton{
   width: 100px;
   height: 55px;
+}
+
+/* Merch Page */
+
+/* Sets up the section */
+.merchandise{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+/* Creates the box for the image and the text to go into */
+.merchbox{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 25%;
+  height: auto;
+  margin: 2%;
+}
+
+/* adds the corner radius to the image */
+.merchbox img{
+  border-radius: 30px;
+}
+
+/* styles the text in the box */
+.merchbox p{
+  margin-top: 10px;
+  color: #000;
+  font-size: 20px;
+}
+
+/* Off Canvas Menu */
+
+.hamburger{
+  color: #fff;
+  margin-right: 5%;
+  display: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-right .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
    
 
