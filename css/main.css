@@ -149,6 +149,7 @@ nav{
   position: relative;
   justify-content: flex-end;
   align-items: center;
+  right: -1%;
 }
 
 nav ul{
@@ -211,12 +212,31 @@ nav ul li:hover a{
 /* Setting up your main content area */
 
 .main_content{
-  width: 100%;
-  margin: 2%;
+  width: 100vw;
+  margin: 2% 0%;
+  padding-left: 2%;
+  padding-right: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* sets up the biography section */
+.bio_content{
+  width: 90vw;
+  margin: 0px;
+}
+
+/* sets up how to style the tour dates */
+.tourdates{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 20%;
+  text-align: left;
+  font-size: 20px;
+
 }
 
 /* Styling your buttons */
@@ -240,6 +260,46 @@ button a{
   color: inherit;
   font-size: inherit;
   text-decoration: none;
+}
+
+/* Here's how you can setup the images on the homepage. Setup as background images */
+
+#video_index{
+  width: 65%;
+  height: auto;
+  background-image: url('../img/video_index.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 75px;
+  position: relative;
+  right: 25%;
+  margin: 2%;
+}
+
+#merch_index{
+  width: 65%;
+  height: auto;
+  background-image: url('../img/video_index.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 75px;
+  position: relative;
+  left: 25%;
+  margin: 2%;
+}
+
+.merch_button{
+  position: relative;
+  left: 27%;
+  margin: 2%;
+}
+
+.video_button{
+  position: relative;
+  right: 27%;
+  margin: 2%;
 }
 
 /* Setting up footer */
@@ -320,6 +380,22 @@ footer{
   margin-top: 10px;
   color: #000;
   font-size: 20px;
+}
+
+/* sets up the youtube outer section to have the videos appear in a grid */
+.youtube{
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 2%;
+}
+
+/* spaces out the iframes */
+.youtube iframe{
+  margin: 2%;
 }
 
 /* Off Canvas Menu */
