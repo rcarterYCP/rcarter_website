@@ -222,21 +222,81 @@ nav ul li:hover a{
   flex-direction: column;
 }
 
+.about_content{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.contact_content {
+  background-color: #000;
+  width: 80%;
+  height: 700px;
+  border-radius: 105px;
+  position: relative;
+  top: 40px;
+  right: 260px;
+}
+
+.contact_content p{
+  color: #fff;
+  font-size: 60px;
+  position: relative;
+  left: 170px;
+}
+
+.contact_content form{
+  position: relative;
+  left: 170px;
+}
+
 /* sets up the biography section */
 .bio_content{
-  width: 90vw;
-  margin: 0px;
+  width: 50%;
+  margin: 2%;
+  padding: 2%;
+  border-right: 50px solid #000000;
+  border-bottom: 50px solid #000000;
+  border-radius: 50px;
+  background-color: #B9E0E2;
+}
+
+#img_bio{
+  border-left: 50px solid #000000;
+  border-bottom: 50px solid #000000;
+  border-radius: 50px;
+  margin: 2%;
 }
 
 /* sets up how to style the tour dates */
+
+.tourpanel{
+  width: 70%;
+  flex-direction: column;
+  text-align: left;
+  display: flex;
+
+}
+
 .tourdates{
   display: flex;
   align-items: center;
   flex-direction: row;
-  width: 20%;
-  text-align: left;
   font-size: 20px;
+}
 
+.rightpanel {
+  width: 20%;
+  background-color: #FC6C3B;
+  height: 200%;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  border-left: 40px solid #000;
 }
 
 /* Styling your buttons */
