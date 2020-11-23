@@ -257,9 +257,9 @@ nav ul li:hover a{
 #rectangle1 {
 position: absolute;
 width: 72px;
-height: 1416px;
-left: 500px;
-top: -525px;
+height: 1500px;
+left: 565px;
+top: -555px;
 
 background: #B9E0E2;
 transform: rotate(90deg);
@@ -268,29 +268,26 @@ transform: rotate(90deg);
 #rectangle2{
   position: absolute;
   width: 73px;
-  height: 884px;
-  left: 1125px;
-  top: 147px;
+  height: 745px;
+  left: 1350px;
+  top: 160px;
 
   background: #FC6C3B;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 
-
-/* Somthing is weird here. When i change the height and left it doesn't Remove
-the area it does not go to the place i expect.*/
 #rectangle4{
   position: absolute;
   width: 30px;
   height: 2000px;
   left: 450px;
-  top: -100px;
+  top: -95px;
 
   background: #F28000;
   transform: matrix(0, -1, -1, 0, 0, 0);
 }
-*/
+
 
 
 /* sets up the biography section */
@@ -303,7 +300,15 @@ the area it does not go to the place i expect.*/
   border-radius: 50px;
   background-color: #B9E0E2;
 }
-
+.coinbg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  width: 60%;
+  margin: 2%;
+}
 #img_bio{
   border-left: 50px solid #000000;
   border-bottom: 50px solid #000000;
@@ -311,26 +316,7 @@ the area it does not go to the place i expect.*/
   margin: 2%;
 }
 
-.top_square{
-position: absolute;
-width: 700px;
-height: 400px;
-left: 175px;
-top: 180px;
 
-background: #000000;
-}
-
-.bottom_square{
-position: absolute;
-width: 700px;
-height: 400px;
-left: 175px;
-top: 600px;
-
-
-background: #000000;
-}
 /* sets up how to style the tour dates */
 
 .tourpanel{
@@ -351,7 +337,7 @@ background: #000000;
 .rightpanel {
   width: 20%;
   background-color: #FC6C3B;
-  height: 260%;
+  height: 160%;
 
   display: flex;
   position: absolute;
@@ -665,32 +651,66 @@ footer{
 /* Media Queries*/
 
 /* Tablet */
-@media screen and (max width: 768px) {
+@media screen and (max width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+
+/* The header on the contact page does not look like the rest. I though maybe
+it was because of the absoltue of rectangle 1,2,3 but when i changed them to relative
+that did not help. I am not sure what is happening in the cantact page.*/
+
+header{
+  flex-direction: column;
 
 }
+header h1{
+  left: 35px;
+}
+
+.Coin_Hero_Home{
+  background-image: url('../img/coin_hero.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 72vw;
+  height: 800px;
+  margin: 0px;
+}
+
+/* The nav is not responding to the new changes of 25% it was orginally -1%
+but it keeps reverting back to that. */
+  nav{
+
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+    right: -15%;
+  }
+
+
+    element.style {
+      /* Contact page rectangles */
+
+        #rectangle1 {
+            left: 585px;
+
+          }
+          #rectangle2{
+
+        }
+
+          #rectangle4{
+
+          }
+
+    }
+
 
 /* Mobile */
 @media screen and (max width: 320px) {
-/*I need to make these in Queries
 
-  .contact_content {
-    background-color: #000;
-    width: 80%;
-    height: 700px;
-    border-radius: 105px;
-    position: relative;
-    top: 40px;
-    right: 260px;
-  }
 
-  .contact_content p{
-    color: #fff;
-    font-size: 65px;
-    position: relative;
-    left: 140px;
-}
 
-*/
+
 
 
 @media only screen and (min-width: 35em) {
