@@ -306,13 +306,14 @@ transform: rotate(90deg);
   align-items: center;
   flex-direction: column;
   background-color: #000;
+  border-radius: 50px;
   width: 60%;
   margin: 2%;
 }
 #img_bio{
   border-left: 50px solid #000000;
   border-bottom: 50px solid #000000;
-  border-radius: 50px;
+  border-radius: 50px; /* i had to add all 4 because it wouldn't work with just one 50px */
   margin: 2%;
 }
 
@@ -651,87 +652,271 @@ footer{
 /* Media Queries*/
 
 /* Tablet */
-@media screen and (max width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+@media screen and (max width: 768px)  {
 
-/* The header on the contact page does not look like the rest. I though maybe
-it was because of the absoltue of rectangle 1,2,3 but when i changed them to relative
-that did not help. I am not sure what is happening in the cantact page.*/
-
-header{
-  flex-direction: column;
-
-}
-header h1{
-  left: 35px;
+button{
+  font-size: 40px;
 }
 
-.Coin_Hero_Home{
-  background-image: url('../img/coin_hero.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 72vw;
-  height: 800px;
+.newsfooter h2 {
+  color: #fff;
+  font-size: 25px;
   margin: 0px;
 }
 
-/* The nav is not responding to the new changes of 25% it was orginally -1%
-but it keeps reverting back to that. */
-  nav{
+/*I need to make the email submissons box and box text smaller */
+#emailsubmission{
+  width: 300px;
+}
 
-    display: flex;
-    position: relative;
-    justify-content: flex-end;
-    align-items: center;
-    right: -15%;
-  }
+.coinbg{
+  width: 80%;
+}
 
+#img_bio{
+  width: 80%;
+}
 
-    element.style {
-      /* Contact page rectangles */
+.bio_content{
+  width: 80%;
+}
 
-        #rectangle1 {
-            left: 585px;
+/* I do not know how to get this futher into the center. */
+.contact_content {
+  background-color: #000;
+  width: 100%;
+  height: 670px;
+  border-radius: 105px;
+  position: relative;
+  top: 40px;
+  right: 120px;
+}
 
-          }
-          #rectangle2{
+.contact_content p {
+color: #fff;
+font-size: 35px;
+position: relative;
+left: 170px;
+}
 
-        }
+.rightpanel {
+width: 20%;
+background-color: #FC6C3B;
+height: 167%;
+display: flex;
+position: absolute;
+right: 0px;
+top: 0px;
+z-index: -1;
+border-left: 40px solid #000;
+}
 
-          #rectangle4{
+.merchbox img {
+width: 100%;
+border-radius: 30px;
+}
+}
 
-          }
+nav{
+
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  right: -10%;
+}
+
+.newsfooter h2{
+
+  font-size: 50px;
+
+element.style {
+  /* Contact page rectangles */
+
+    #rectangle1 {
+        left: 585px;
+
+      }
+      #rectangle2{
 
     }
 
+      #rectangle4{
 
+      }
+
+/*
 /* Mobile */
 @media screen and (max width: 320px) {
 
+  button{
+    font-size: 26px;
+  }
+
+  .Coin_Hero_Home{
+    height: 400px;
+  }
+
+  nav{
+    right: -10%;
+    top: 150px;
+  }
+
+  .navlink1 {
+    width: 100px;
+    position: relative;
+    left: 25px;
+  }
+
+  .navlink2 {
+    width: 100px;
+    position: relative;
+    left: 45px;
+  }
+
+  .navlink3 {
+    width: 100px;
+    position: relative;
+    left: 75px;
+  }
+
+  .navlink4 {
+    width: 80px;
+    position: relative;
+    left: 105px;
+  }
+
+  nav ul li a {
+    color: #000000;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    padding-left: 15px;
+  }
+
+  .newsfooter h2 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 2%;
+  }
+
+  #emailsubmission{
+    width: 150px;
+    height: 25px;
+  }
+
+  #formsubmitbutton {
+    width: 70px;
+    height: 25px;
+  }
+
+  #video_index{
+    right: 0%;
+    width: 85%;
+  }
+
+  #merch_index{
+    left: 0%;
+    width: 85%;
+  }
+
+  .video_button,
+  .merch_button{
+    right: 0px;
+    left: 0px;
+    width: 60%;
+  }
+
+  header h1 {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0px;
+    position: relative;
+    left: 20px;
+  }
+
+  .homelink {
+    margin-right: -30px;
+  }
+
+  .homelink img{
+    width: 50%;
+  }
+
+  .merchandise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .merchbox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    margin: 4%;
+  }
+
+  .contact_content {
+    background-color: #000;
+    width: 140%;
+    height: 500px;
+    border-radius: 105px;
+    position: relative;
+    top: 40px;
+    right: 120px;
+  }
+
+  .contact_content p {
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+    left: 200px;
+    top: 50px;
+  }
+
+  .contact_content form {
+    position: relative;
+    left: 200px;
+    top: 50px;
+  }
+
+  .newsfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+  }
+
+  .rightpanel {
+    width: 6%;
+    background-color: #FC6C3B;
+    height: 310%;
+    display: flex;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
+    border-left: 20px solid #000;
+  }
+
+  .main_content{
+    width: 96%;
+  }
+
+  }
 
 
 
 
 
 @media only screen and (min-width: 35em) {
-/* need to make this into a media Queries
-  .contact_content {
-    background-color: #000;
-    width: 80%;
-    height: 700px;
-    border-radius: 105px;
-    position: relative;
-    top: 40px;
-    right: 260px;
-  }
 
-  .contact_content p{
-    color: #fff;
-    font-size: 65px;
-    position: relative;
-    left: 140px;
-  /* Style adjustments for viewports that meet the condition */
-}
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
